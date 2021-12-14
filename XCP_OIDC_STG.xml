@@ -1,0 +1,38 @@
+<TrustFrameworkPolicy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/online/cpim/schemas/2013/06" PolicySchemaVersion="0.3.0.0" TenantId="ntapb2c.onmicrosoft.com" PolicyId="B2C_1A_test_XCP_OIDC_STG" PublicPolicyUri="http://ntapb2c.onmicrosoft.com/B2C_1A_test_XCP_OIDC_STG" DeploymentMode="Development" UserJourneyRecorderEndpoint="urn:journeyrecorder:applicationinsights" TenantObjectId="0e95476d-69f9-496f-acea-82451fca13d8">
+  <BasePolicy>
+    <TenantId>ntapb2c.onmicrosoft.com</TenantId>
+    <PolicyId>B2C_1A_test_TrustFrameworkExtensions</PolicyId>
+  </BasePolicy>
+  <RelyingParty>
+    <DefaultUserJourney ReferenceId="NetAppSignIn" />
+    <UserJourneyBehaviors>
+      <JourneyInsights TelemetryEngine="ApplicationInsights" InstrumentationKey="83872308-8b8c-4242-a5d9-fadb854c5ef3" DeveloperMode="true" ClientEnabled="false" ServerEnabled="true" TelemetryVersion="1.0.0" />
+      <ScriptExecution>Allow</ScriptExecution>
+    </UserJourneyBehaviors>
+    <TechnicalProfile Id="PolicyProfile">
+      <DisplayName>PolicyProfile</DisplayName>
+      <Protocol Name="OpenIdConnect" />
+      <InputClaims>
+        <InputClaim ClaimTypeReferenceId="givenEmail" />
+      </InputClaims>
+      <OutputClaims>
+        <OutputClaim ClaimTypeReferenceId="objectId" PartnerClaimType="sub" />
+        <OutputClaim ClaimTypeReferenceId="tenantId" AlwaysUseDefaultValue="true" DefaultValue="{Policy:TenantObjectId}" />
+        <OutputClaim ClaimTypeReferenceId="buildId" AlwaysUseDefaultValue="true" DefaultValue="20210805.2_Release-34" />
+        <OutputClaim ClaimTypeReferenceId="givenName" PartnerClaimType="firstname" />
+        <OutputClaim ClaimTypeReferenceId="sn" PartnerClaimType="lastName" />
+		<OutputClaim ClaimTypeReferenceId="mail" />
+        <OutputClaim ClaimTypeReferenceId="dn" PartnerClaimType="sm_userdn"/>
+        <OutputClaim ClaimTypeReferenceId="CustomerType" /> 
+		<OutputClaim ClaimTypeReferenceId="nowenabled" />
+        <OutputClaim ClaimTypeReferenceId="uid" PartnerClaimType="username1" />
+		<OutputClaim ClaimTypeReferenceId="businessCategory" PartnerClaimType="companyname" />
+		<OutputClaim ClaimTypeReferenceId="contactEntitlement" PartnerClaimType="contact_entitlement" />
+		<OutputClaim ClaimTypeReferenceId="OEMPartner" PartnerClaimType="oemPartner" />
+		<OutputClaim ClaimTypeReferenceId="PartnerType" PartnerClaimType="partnerType" />
+		<OutputClaim ClaimTypeReferenceId="agreementtype" />
+      </OutputClaims>
+      <SubjectNamingInfo ClaimType="sub" />
+    </TechnicalProfile>
+  </RelyingParty>
+</TrustFrameworkPolicy>
