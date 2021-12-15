@@ -1,0 +1,11 @@
+Hi ,  I am learning to execute push commands today. Below are the steps required 
+
+Create the file in your local desktop Folder
+git add .
+git commit -m "description"
+git push origin master
+
+
+anytime you can hit git status to check the latest status of repo
+
+
