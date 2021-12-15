@@ -1,0 +1,270 @@
+puneet2@puneet201-PC MINGW64 /c/DevOps
+$ git remote add origin "https://github.com/PuneetDevops/Initial-Testing.git"
+fatal: not a git repository (or any of the parent directories): .git
+
+puneet2@puneet201-PC MINGW64 /c/DevOps
+$ git remote add origin "git@github.com:PuneetDevops/Initial-Testing.git"
+fatal: not a git repository (or any of the parent directories): .git
+
+puneet2@puneet201-PC MINGW64 /c/DevOps
+$ git init
+Initialized empty Git repository in C:/DevOps/.git/
+
+puneet2@puneet201-PC MINGW64 /c/DevOps (master)
+$ git remote add origin "git@github.com:PuneetDevops/Initial-Testing.git"
+
+puneet2@puneet201-PC MINGW64 /c/DevOps (master)
+$ ls -ltrh
+total 0
+
+puneet2@puneet201-PC MINGW64 /c/DevOps (master)
+$ git checkout main
+error: pathspec 'main' did not match any file(s) known to git
+
+puneet2@puneet201-PC MINGW64 /c/DevOps (master)
+$ git fetch origin
+The authenticity of host 'github.com (13.234.210.38)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+puneet2@puneet201-PC MINGW64 /c/DevOps (master)
+$ pwd
+/c/DevOps
+
+puneet2@puneet201-PC MINGW64 /c/DevOps (master)
+$ git pull origin master
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+puneet2@puneet201-PC MINGW64 /c/DevOps (master)
+$ git remote -v
+origin  git@github.com:PuneetDevops/Initial-Testing.git (fetch)
+origin  git@github.com:PuneetDevops/Initial-Testing.git (push)
+
+puneet2@puneet201-PC MINGW64 /c/DevOps (master)
+$ ls -al ~/.ssh
+total 13
+drwxr-xr-x 1 puneet2 1049089  0 Dec 14 17:25 .
+drwxr-xr-x 1 puneet2 1049089  0 Dec 14 17:25 ..
+-rw-r--r-- 1 puneet2 1049089 92 Dec 14 17:25 known_hosts
+
+puneet2@puneet201-PC MINGW64 /c/DevOps (master)
+$ git remote add origin "https://github.com/PuneetDevops/Initial-Testing.git"
+error: remote origin already exists.
+
+puneet2@puneet201-PC MINGW64 /c/DevOps (master)
+$ cd ..
+
+puneet2@puneet201-PC MINGW64 /c
+$ pwd
+/c
+
+puneet2@puneet201-PC MINGW64 /c
+$ mkdir DevOps1
+
+puneet2@puneet201-PC MINGW64 /c
+$ cd DevOps1/
+
+puneet2@puneet201-PC MINGW64 /c/DevOps1
+$ git remote add origin "https://github.com/PuneetDevops/Initial-Testing.git"
+fatal: not a git repository (or any of the parent directories): .git
+
+puneet2@puneet201-PC MINGW64 /c/DevOps1
+$ git init
+Initialized empty Git repository in C:/DevOps1/.git/
+
+puneet2@puneet201-PC MINGW64 /c/DevOps1 (master)
+$ git remote add origin "https://github.com/PuneetDevops/Initial-Testing.git"
+
+puneet2@puneet201-PC MINGW64 /c/DevOps1 (master)
+$ ls -ltrh
+total 0
+
+puneet2@puneet201-PC MINGW64 /c/DevOps1 (master)
+$ git fetch origin
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), 2.14 KiB | 68.00 KiB/s, done.
+From https://github.com/PuneetDevops/Initial-Testing
+ * [new branch]      main       -> origin/main
+
+puneet2@puneet201-PC MINGW64 /c/DevOps1 (master)
+$ git branch
+
+puneet2@puneet201-PC MINGW64 /c/DevOps1 (master)
+$ git checkout main
+Switched to a new branch 'main'
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+puneet2@puneet201-PC MINGW64 /c/DevOps1 (main)
+$ ls
+LATX_OIDC_STG.xml  README.md
+
+puneet2@puneet201-PC MINGW64 /c/DevOps1 (main)
+$ ls -ltrh
+total 5.0K
+-rw-r--r-- 1 puneet2 1049089 2.9K Dec 14 17:36 LATX_OIDC_STG.xml
+-rw-r--r-- 1 puneet2 1049089   17 Dec 14 17:36 README.md
+
+puneet2@puneet201-PC MINGW64 /c/DevOps1 (main)
+$ pwd
+/c/DevOps1
+
+puneet2@puneet201-PC MINGW64 /c/DevOps1 (main)
+$ git checkout master
+error: pathspec 'master' did not match any file(s) known to git
+
+puneet2@puneet201-PC MINGW64 /c/DevOps1 (main)
+$ git fetch origin
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 1.57 KiB | 73.00 KiB/s, done.
+From https://github.com/PuneetDevops/Initial-Testing
+   e9c3f59..57bf19c  main       -> origin/main
+
+puneet2@puneet201-PC MINGW64 /c/DevOps1 (main)
+$ ls -ltrh
+total 5.0K
+-rw-r--r-- 1 puneet2 1049089 2.9K Dec 14 17:36 LATX_OIDC_STG.xml
+-rw-r--r-- 1 puneet2 1049089   17 Dec 14 17:36 README.md
+
+puneet2@puneet201-PC MINGW64 /c/DevOps1 (main)
+$ git fetch origin
+From https://github.com/PuneetDevops/Initial-Testing
+ * [new branch]      master     -> origin/master
+
+puneet2@puneet201-PC MINGW64 /c/DevOps1 (main)
+$ git checkout master
+Switched to a new branch 'master'
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+puneet2@puneet201-PC MINGW64 /c/DevOps1 (master)
+$ ls -ltrh
+total 9.0K
+-rw-r--r-- 1 puneet2 1049089 2.9K Dec 14 17:36 LATX_OIDC_STG.xml
+-rw-r--r-- 1 puneet2 1049089   17 Dec 14 17:36 README.md
+-rw-r--r-- 1 puneet2 1049089 2.7K Dec 14 17:48 XCP_OIDC_STG.xml
+
+puneet2@puneet201-PC MINGW64 /c/DevOps1 (master)
+$ git pull origin master
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 714 bytes | 59.00 KiB/s, done.
+From https://github.com/PuneetDevops/Initial-Testing
+ * branch            master     -> FETCH_HEAD
+   57bf19c..3892424  master     -> origin/master
+Updating 57bf19c..3892424
+Fast-forward
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+puneet2@puneet201-PC MINGW64 /c/DevOps1 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        SMARTSOLVE_OIDC_STG.xml
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+puneet2@puneet201-PC MINGW64 /c/DevOps1 (master)
+$ git add SMARTSOLVE_OIDC_STG.xml
+
+puneet2@puneet201-PC MINGW64 /c/DevOps1 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   SMARTSOLVE_OIDC_STG.xml
+
+
+puneet2@puneet201-PC MINGW64 /c/DevOps1 (master)
+$ git commit -m "upload file"
+[master 6d5f8d1] upload file
+ Committer: Sharma <puneet2@netapp.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 42 insertions(+)
+ create mode 100644 SMARTSOLVE_OIDC_STG.xml
+
+puneet2@puneet201-PC MINGW64 /c/DevOps1 (master)
+$  git commit --amend --reset-author
+[master 34eb96d] upload file
+ Committer: Sharma <puneet2@netapp.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 42 insertions(+)
+ create mode 100644 SMARTSOLVE_OIDC_STG.xml
+
+puneet2@puneet201-PC MINGW64 /c/DevOps1 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+puneet2@puneet201-PC MINGW64 /c/DevOps1 (master)
+$ git push origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.28 KiB | 435.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/PuneetDevops/Initial-Testing.git
+   3892424..34eb96d  master -> master
+
+puneet2@puneet201-PC MINGW64 /c/DevOps1 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+puneet2@puneet201-PC MINGW64 /c/DevOps1 (master)
+$ ls -trh
+SMARTSOLVE_OIDC_STG.xml  LATX_OIDC_STG.xml  XCP_OIDC_STG.xml  README.md
+
+puneet2@puneet201-PC MINGW64 /c/DevOps1 (master)
+$
