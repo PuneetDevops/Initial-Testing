@@ -23,7 +23,7 @@
         <OutputClaim ClaimTypeReferenceId="uid" PartnerClaimType="crmloginalias" /> 
         <OutputClaim ClaimTypeReferenceId="mail" />
 		<OutputClaim ClaimTypeReferenceId="ntapSAPUsername" PartnerClaimType="crmlogin" />
-		<OutputClaim ClaimTypeReferenceId="sn" PartnerClaimType="lastname" />
+		<OutputClaim ClaimTypeReferenceId="sn" PartnerClaimType="surname" />
 		<OutputClaim ClaimTypeReferenceId="agreementtype" /> 
        	<OutputClaim ClaimTypeReferenceId="CustomerType" PartnerClaimType="crmcustomertype" />
 		<OutputClaim ClaimTypeReferenceId="dn" PartnerClaimType="sm_userdn" />
