@@ -1,0 +1,2 @@
+we can combine add and commit using the command
+git commit -a 
